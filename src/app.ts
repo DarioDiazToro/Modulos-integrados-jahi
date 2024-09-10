@@ -5,6 +5,7 @@ import express from "express";
 import misRutas from "./router";
 import morgan from "morgan";
 import { AppDataSource } from "./config/data-source";
+import path from "path";
 
 // mysql://root:jWWDmECbwfmJUBKfcWFmwtSxsfyZpgsu@autorack.proxy.rlwy.net:13901/railway
 
@@ -57,6 +58,7 @@ export class Server {
             }
         }))
 
+        this.app.use(express.static(path.join(__dirname, 'public')));
     }
 
 
