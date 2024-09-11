@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password').value;
 
         try {
-            const response = await fetch('localhost:3000/api/v1/login', { // Cambia la ruta a tu endpoint de autenticación
+            const response = await fetch('http://localhost:3000/api/v1/login', { // Cambia la ruta a tu endpoint de autenticación
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
